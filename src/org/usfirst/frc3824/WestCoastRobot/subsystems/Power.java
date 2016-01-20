@@ -9,10 +9,10 @@
 // it from being updated in the future.
 
 
-package org.usfirst.frc3824.PrototypeRobot.subsystems;
+package org.usfirst.frc3824.WestCoastRobot.subsystems;
 
-import org.usfirst.frc3824.PrototypeRobot.RobotMap;
-import org.usfirst.frc3824.PrototypeRobot.commands.*;
+import org.usfirst.frc3824.WestCoastRobot.RobotMap;
+import org.usfirst.frc3824.WestCoastRobot.commands.*;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
