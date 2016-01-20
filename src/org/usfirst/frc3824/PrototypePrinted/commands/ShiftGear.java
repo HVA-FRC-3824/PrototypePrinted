@@ -9,10 +9,11 @@
 // it from being updated in the future.
 
 
-package org.usfirst.frc3824.WestCoastRobot.commands;
+package org.usfirst.frc3824.PrototypePrinted.commands;
+
+import org.usfirst.frc3824.PrototypePrinted.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
-import org.usfirst.frc3824.WestCoastRobot.Robot;
 
 /**
  *

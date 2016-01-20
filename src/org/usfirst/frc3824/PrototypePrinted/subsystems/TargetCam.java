@@ -9,10 +9,10 @@
 // it from being updated in the future.
 
 
-package org.usfirst.frc3824.WestCoastRobot.subsystems;
+package org.usfirst.frc3824.PrototypePrinted.subsystems;
 
-import org.usfirst.frc3824.WestCoastRobot.RobotMap;
-import org.usfirst.frc3824.WestCoastRobot.commands.*;
+import org.usfirst.frc3824.PrototypePrinted.RobotMap;
+import org.usfirst.frc3824.PrototypePrinted.commands.*;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 
