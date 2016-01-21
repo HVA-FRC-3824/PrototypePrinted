@@ -16,6 +16,14 @@
 build
 sysProps.xml
 
+# Ignore .classpath configuration file
+.classpath
+
+# Ignore files with the "~" suffix.
+# These are genrated by RobotBuilder every time it makes a change so it doesn't overwrite anything permanently 
+# We don't really need to use git to keep track of them
+*~
+
 # We are including the 'sunspotfrcsdk' files in our repo. 
 # If they were managed in a better way (e.g., Maven) then we wouldn't 
 # have to store them locally. But this is the easiest way to ensure 
