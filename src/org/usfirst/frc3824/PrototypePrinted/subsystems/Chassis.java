@@ -66,7 +66,9 @@ public class Chassis extends Subsystem {
     
     public void driveWithJoystick(Joystick stick)
     {
-    	wCDrive4.arcadeDrive(stick);
+    	// wCDrive4.arcadeDrive(stick);
+        // use Y-axis and Rotation for driving
+   	wCDrive4.arcadeDrive(stick, 1, stick, 2, true); // 0=X 1=Y 2=Z
     }
     
     public void stop()
