@@ -18,6 +18,7 @@ import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.TalonSRX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  *
@@ -60,6 +61,7 @@ public class Shooter extends Subsystem
 	{
 		// Remember the requested state of the shooter wheels
 		m_enabled = enable;
+		SmartDashboard.putBoolean("Shooter Enabled", enable);
 	}
 
 	/**

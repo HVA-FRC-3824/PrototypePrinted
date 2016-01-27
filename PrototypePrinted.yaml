@@ -305,7 +305,7 @@ Children:
         validators: null
         value: []
       I: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: I, validators: null,
-        value: 0.1}
+        value: 0.0}
       Minimum Input: !!robotbuilder.data.properties.DoubleProperty {default: 0, name: Minimum Input,
         validators: null, value: 0.0}
       Limit Input: !!robotbuilder.data.properties.BooleanProperty {default: false,
@@ -313,7 +313,7 @@ Children:
       Minimum Output: !!robotbuilder.data.properties.DoubleProperty {default: -1,
         name: Minimum Output, validators: null, value: -1.0}
       P: !!robotbuilder.data.properties.DoubleProperty {default: 1, name: P, validators: null,
-        value: 12.0}
+        value: 20.0}
       Input: !!robotbuilder.data.properties.ChildSelectionProperty
         default: 0
         name: Input
