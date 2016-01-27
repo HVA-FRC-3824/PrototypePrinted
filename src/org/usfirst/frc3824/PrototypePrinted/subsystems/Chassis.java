@@ -179,4 +179,20 @@ public class Chassis extends Subsystem
 			wCDrive4.drive(magnitude, direction);
 		}
 	}
+	
+	public void setLidarEnabled(boolean enabled, boolean automatic)
+	{
+		lidar.setEnabled(enabled);
+		lidar.setAutomaticMode(enabled);
+	}
+	
+	public void setLidarEnabled(boolean enabled)
+	{
+		setLidarEnabled(enabled, true);
+	}
+	
+	public double getLidarValue()
+	{
+		return lidar.getRangeInches();
+	}
 }
