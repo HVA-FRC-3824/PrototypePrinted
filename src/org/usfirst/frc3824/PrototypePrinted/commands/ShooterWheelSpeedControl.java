@@ -47,7 +47,7 @@ public class ShooterWheelSpeedControl extends Command
 	protected void execute()
 	{
 		if (Robot.shooter.IsShooterWheelEnabled() == true)
-			Robot.shooter.ShooterWheelControl(Robot.oi.controllerJoystick.getY());
+			Robot.shooter.ShooterWheelControl(-Robot.oi.controllerJoystick.getY());
 		else
 			Robot.shooter.ShooterWheelControl(0.0);
 		
