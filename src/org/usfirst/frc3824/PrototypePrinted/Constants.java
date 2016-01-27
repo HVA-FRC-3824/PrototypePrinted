@@ -30,4 +30,9 @@ public class Constants
 	// Shooter Elevation constants
 	public static double SHOOTER_ELEVATION_SETPOINT_MIN = .36;
 	public static double SHOOTER_ELEVATION_SETPOINT_MAX = .96;
+
+	// ***************************************************************************************
+	// Shooter Wheel Speed constants
+	public static double SHOOTER_WHEEL_MIN_MULTIPLIER = .5;
+	public static double SHOOTER_WHEEL_MAX_MULTIPLIER = 1.2;
 }

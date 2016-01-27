@@ -12,6 +12,7 @@ package org.usfirst.frc3824.PrototypePrinted.subsystems;
 
 import org.usfirst.frc3824.PrototypePrinted.RobotMap;
 import org.usfirst.frc3824.PrototypePrinted.commands.*;
+import org.usfirst.frc3824.PrototypePrinted.Constants;
 
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.SpeedController;
@@ -81,8 +82,15 @@ public class Shooter extends Subsystem
 	{
 		// Set the shooter wheel motor speeds
 		// Note: The multiplier is to ensure maximum speed is reached
-		wheelRight.set(speed * 1.5);
-		wheelLeft.set(speed * 1.5);
+		// The multiplier also reduces the minimum speed
+		if (speed<0)
+		{
+			wheelRight.set(speed * Constants.SHOOTER_WHEEL_MIN_MULTIPLIER);
+			wheelLeft.set(speed * Constants.SHOOTER_WHEEL_MIN_MULTIPLIER);
+		} else {
+			wheelRight.set(speed * Constants.SHOOTER_WHEEL_MAX_MULTIPLIER);
+			wheelLeft.set(speed * Constants.SHOOTER_WHEEL_MAX_MULTIPLIER);			
+		}
 	}
 
 	/**
