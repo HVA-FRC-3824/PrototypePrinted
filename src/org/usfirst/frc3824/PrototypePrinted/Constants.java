@@ -24,4 +24,15 @@ public class Constants
 	public static double DRIVETRAIN_DRIVE_STRAIGHT_P;
 	public static double DRIVETRAIN_DRIVE_STRAIGHT_I;
 	public static double DRIVETRAIN_DRIVE_STRAIGHT_D;
+	
+
+	// ***************************************************************************************
+	// Shooter Elevation constants
+	public static double SHOOTER_ELEVATION_SETPOINT_MIN = .30;
+	public static double SHOOTER_ELEVATION_SETPOINT_MAX = .88;
+
+	// ***************************************************************************************
+	// Shooter Wheel Speed constants
+	public static double SHOOTER_WHEEL_MIN_MULTIPLIER = 1.0;
+	public static double SHOOTER_WHEEL_MAX_MULTIPLIER = 1.5;
 }

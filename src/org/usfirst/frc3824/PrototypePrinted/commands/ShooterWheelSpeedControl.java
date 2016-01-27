@@ -11,6 +11,8 @@
 package org.usfirst.frc3824.PrototypePrinted.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 import org.usfirst.frc3824.PrototypePrinted.Robot;
 
 /**
@@ -45,11 +47,15 @@ public class ShooterWheelSpeedControl extends Command
 	protected void execute()
 	{
 		if (Robot.shooter.IsShooterWheelEnabled() == true)
-			Robot.shooter.ShooterWheelControl(Robot.oi.getControllerJoystick().getY());
+			Robot.shooter.ShooterWheelControl(-Robot.oi.controllerJoystick.getY());
 		else
 			Robot.shooter.ShooterWheelControl(0.0);
+		
+		SmartDashboard.putNumber("Control Y: ",Robot.oi.controllerJoystick.getY());
 	}
 
+	
+	
 	// Make this return true when this Command no longer needs to run execute()
 	protected boolean isFinished()
 	{
