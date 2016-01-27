@@ -12,6 +12,8 @@ package org.usfirst.frc3824.PrototypePrinted.subsystems;
 
 import org.usfirst.frc3824.PrototypePrinted.RobotMap;
 import org.usfirst.frc3824.PrototypePrinted.commands.*;
+import org.usfirst.frc3824.PrototypePrinted.Constants;
+
 import edu.wpi.first.wpilibj.AnalogPotentiometer;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.Talon;
@@ -105,13 +107,13 @@ public class ShooterAngle extends PIDSubsystem
 
 	public void setShooterElevationSetpoint(double setpoint)
 	{
-		if (setpoint < 0.05)
+		if (setpoint < Constants.SHOOTER_ELEVATION_SETPOINT_MIN)
 		{
-			setpoint = 0.05;
+			setpoint = Constants.SHOOTER_ELEVATION_SETPOINT_MIN;
 		}
-		if (setpoint > 0.95)
+		if (setpoint > Constants.SHOOTER_ELEVATION_SETPOINT_MAX)
 		{
-			setpoint = 0.95;
+			setpoint = Constants.SHOOTER_ELEVATION_SETPOINT_MAX;
 		}
 		setSetpoint(setpoint);
 	}
