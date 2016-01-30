@@ -80,16 +80,29 @@ public class Shooter extends Subsystem
 	 */
 	public void ShooterWheelControl(double speed)
 	{
+		ShooterWheelControl(speed,0);
+	}
+
+	/**
+	 * Method to enable the shooter with the specified speed and curve
+	 * Curve is a percent of the speed parameter to be added to the right and subtracted from the left
+	 * Positve curves right, Negative curves left
+	 */
+	public void ShooterWheelControl(double speed, double curvePercent)
+	{
 		// Set the shooter wheel motor speeds
 		// Note: The multiplier is to ensure maximum speed is reached
 		// The multiplier also reduces the minimum speed
+		
+		double curvePart = speed * curvePercent;
+		
 		if (speed<0)
 		{
-			wheelRight.set(speed * Constants.SHOOTER_WHEEL_MIN_MULTIPLIER);
-			wheelLeft.set(speed * Constants.SHOOTER_WHEEL_MIN_MULTIPLIER);
+			wheelRight.set(speed * Constants.SHOOTER_WHEEL_MIN_MULTIPLIER+curvePart);
+			wheelLeft.set(speed * Constants.SHOOTER_WHEEL_MIN_MULTIPLIER-curvePart);
 		} else {
-			wheelRight.set(speed * Constants.SHOOTER_WHEEL_MAX_MULTIPLIER);
-			wheelLeft.set(speed * Constants.SHOOTER_WHEEL_MAX_MULTIPLIER);			
+			wheelRight.set(speed * Constants.SHOOTER_WHEEL_MAX_MULTIPLIER+curvePart);
+			wheelLeft.set(speed * Constants.SHOOTER_WHEEL_MAX_MULTIPLIER-curvePart);			
 		}
 	}
 
