@@ -194,16 +194,7 @@ public class Chassis extends Subsystem
 		 * Virtual function to receive the PID output and set the drive direction 
 		 */
 		public void pidWrite(double PIDoutput)
-		{
-			// Push values to the smart dashboard for debugging
-			// Note: The magnitude should not change, but the direction is from the PID output
-			SmartDashboard.putNumber("magnitude", magnitude);
-			SmartDashboard.putNumber("direction", direction);
-			SmartDashboard.putNumber("PIDoutput", PIDoutput);
-
-			// Set the PID output to the direction value for tracking
-//			setDirection(PIDoutput);
-
+		{	
 			// Drive the robot given the speed and direction
 			wCDrive4.drive(-magnitude, PIDoutput);
 		}
