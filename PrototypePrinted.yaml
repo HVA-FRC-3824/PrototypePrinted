@@ -637,16 +637,19 @@ Children:
         - !!robotbuilder.data.properties.ParameterDescriptor {name: DriveDuration,
           type: double}
       Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
-        default: &id016
+        default: []
+        name: Parameter presets
+        validators: null
+        value:
         - !!robotbuilder.data.properties.ParameterSet
           name: DriveDuration
           parameters:
           - {name: DriveDuration, type: double, value: '2'}
-        name: Parameter presets
-        validators: null
-        value: *id016
       Commands: !!robotbuilder.data.properties.ListProperty
-        default: &id019
+        default: []
+        name: Commands
+        validators: [List]
+        value:
         - !!robotbuilder.data.CommandGroupEntry
           command:
             base:
@@ -663,14 +666,14 @@ Children:
                 validators: null
                 value: []
               - !!robotbuilder.data.properties.ParameterSetProperty
-                default: &id017 []
+                default: &id016 []
                 name: Parameter presets
                 validators: null
-                value: *id017
+                value: *id016
               supports: {}
               type: Command
             name: Chassis Drive Straight
-            properties: &id020
+            properties: &id017
               Parameters: !!robotbuilder.data.properties.ParametersProperty
                 default: []
                 name: Parameters
@@ -679,10 +682,10 @@ Children:
               Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
                 name: Requires, type: Subsystem, validators: null, value: Chassis}
               Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
-                default: &id018 []
+                default: []
                 name: Parameter presets
                 validators: null
-                value: *id018
+                value: []
               Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {
                 default: true, name: Button on SmartDashboard, validators: null, value: true}
           hasMatch: true
@@ -693,9 +696,6 @@ Children:
             validators: null
             value: []
           previous: null
-        name: Commands
-        validators: [List]
-        value: *id019
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: true}
     Base: Command Group
@@ -785,9 +785,27 @@ Children:
     Base: Command
     Name: Shooter Elevation Control
   - Children: []
-    Properties: *id020
+    Properties: *id017
     Base: Command
     Name: Chassis Drive Straight
+  - Children: []
+    Properties:
+      Parameters: !!robotbuilder.data.properties.ParametersProperty
+        default: []
+        name: Parameters
+        validators: null
+        value: []
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: Chassis}
+      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
+        default: &id018 []
+        name: Parameter presets
+        validators: null
+        value: *id018
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: true}
+    Base: Command
+    Name: Chassis Turn To Image Target
   Properties: {}
   Base: Commands
   Name: Commands

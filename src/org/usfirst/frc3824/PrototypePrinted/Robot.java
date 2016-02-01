@@ -126,6 +126,8 @@ public class Robot extends IterativeRobot
 
 		// Add current gyro angle to smart dashboard
 		SmartDashboard.putNumber("Gyro Angle", Robot.chassis.getGyro().getAngle());
+		
+		SmartDashboard.putNumber("Lidar Range (cm)", Robot.chassis.getLidarDistanceCentimeters());
 	}
 
 	public void teleopInit()
@@ -147,6 +149,8 @@ public class Robot extends IterativeRobot
 		SmartDashboard.putBoolean("Compressor Enabled", RobotMap.chassisCompressor.enabled());
 		SmartDashboard.putBoolean("Pressure Switch", RobotMap.chassisCompressor.getPressureSwitchValue());
 		SmartDashboard.putNumber("Compressor Current", RobotMap.chassisCompressor.getCompressorCurrent());
+		
+		SmartDashboard.putNumber("Lidar Range (cm)", Robot.chassis.getLidarDistanceCentimeters());
 	}
 
 	/**

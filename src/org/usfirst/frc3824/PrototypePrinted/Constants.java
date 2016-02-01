@@ -24,6 +24,12 @@ public class Constants
 	public static double DRIVETRAIN_DRIVE_STRAIGHT_P           = 0.1;
 	public static double DRIVETRAIN_DRIVE_STRAIGHT_I           = 0.0;
 	public static double DRIVETRAIN_DRIVE_STRAIGHT_D           = 0.0;
+
+	// ***************************************************************************************
+	// Image turn constants
+	public static double IMAGE_TURN_P                          = 0.1;
+	public static double IMAGE_TURN_I                          = 0.0;
+	public static double IMAGE_TURN_D                          = 0.0;
 	
 	// ***************************************************************************************
 	// Shooter Elevation constants
