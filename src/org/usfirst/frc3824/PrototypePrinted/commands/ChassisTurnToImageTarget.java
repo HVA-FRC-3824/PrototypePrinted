@@ -117,6 +117,8 @@ public class ChassisTurnToImageTarget extends Command
 			
 			double positionFromCenterX = targetPosition-imageWidth/2;
 			
+			SmartDashboard.putNumber("Image Position From Center X", positionFromCenterX);
+			
 			return -positionFromCenterX; 
 			// if the image is positioned to the right, the robot is too far left.
 			// so this return value is flipped 
@@ -140,6 +142,8 @@ public class ChassisTurnToImageTarget extends Command
 			
 			if (maxAreaIndex >= 0)
 			{
+				SmartDashboard.putNumber("Target Center X", centerXs[maxAreaIndex]);
+				
 				return centerXs[maxAreaIndex];
 			}
 			else
