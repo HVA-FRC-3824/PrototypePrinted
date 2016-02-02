@@ -29,7 +29,7 @@ public class Constants
 	public static double DRIVETRAIN_TURN_ANGLE_I               = 0.0;
 	public static double DRIVETRAIN_TURN_ANGLE_D               = 0.0;
 	
-	public static double TURN_THRESHOLD                        = 1.0;
+	public static double TURN_THRESHOLD                        = 3.0;
 			
 	// ***************************************************************************************
 	// Shooter Elevation constants

@@ -612,12 +612,12 @@ Children:
                   name: TurnRight90
                   parameters:
                   - {name: TurnDegrees, type: double, value: '90.0'}
-                  - {name: DrivePower, type: double, value: '1.0'}
+                  - {name: DrivePower, type: double, value: '.6'}
                 - !!robotbuilder.data.properties.ParameterSet
                   name: TurnRight45
                   parameters:
                   - {name: TurnDegrees, type: double, value: '45.0'}
-                  - {name: DrivePower, type: double, value: '1.0'}
+                  - {name: DrivePower, type: double, value: '.6'}
               Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {
                 default: true, name: Button on SmartDashboard, validators: null, value: true}
           hasMatch: true
