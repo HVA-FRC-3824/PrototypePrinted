@@ -48,17 +48,25 @@ public class ShooterWheelSpeedControl extends Command
 	// Called repeatedly when this Command is scheduled to run
 	protected void execute()
 	{
+		// Determine if the shooter wheel is enabled
 		if (Robot.shooter.IsShooterWheelEnabled() == true)
+		{
+			// Set the shooter wheel based on the Operator Joystick
 			Robot.shooter.ShooterWheelControl(-Robot.oi.controllerJoystick.getY(),Robot.oi.controllerJoystick.getTwist()*Constants.SHOOTER_WHEEL_TELEOP_CURVE_MULTIPLIER);
+			SmartDashboard.putNumber("Shooter Speed", -Robot.oi.controllerJoystick.getY());
+		}
 		else
+		{
+			// Shooter is disabled so turn off the motors
 			Robot.shooter.ShooterWheelControl(0.0);
-		
-		SmartDashboard.putNumber("Control Twist: ",Robot.oi.controllerJoystick.getTwist());
+		SmartDashboard.putNumber("Control Y: ",Robot.oi.controllerJoystick.getY());
+		}
 	}
-	
+
 	// Make this return true when this Command no longer needs to run execute()
 	protected boolean isFinished()
 	{
+		// The Shooter Wheel is always active
 		return false;
 	}
 

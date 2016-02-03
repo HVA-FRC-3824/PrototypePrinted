@@ -81,7 +81,6 @@ public class Robot extends IterativeRobot
 
 		chooser = new SendableChooser();
 		chooser.addDefault("1) Do Nothing", new AutonomousDoNothing());
-		chooser.addObject("2) Drive Over Defense", new AutonomousDriveOverDefense(2));
 
 		// RobotMap.chassisCompressor.start();
 		RobotMap.chassisCompressor.setClosedLoopControl(true);
