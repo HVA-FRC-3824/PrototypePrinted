@@ -69,7 +69,7 @@ public class OI
         SmartDashboard.putData("Shooter Elevation Control", new ShooterElevationControl());
         SmartDashboard.putData("Chassis Drive Straight", new ChassisDriveStraight());
         SmartDashboard.putData("setShooterElevation", new setShooterElevation());
-        SmartDashboard.putData("ConfigureCamera: enable", new ConfigureCamera(true));
+        SmartDashboard.putData("Camera Run", new CameraRun());
         SmartDashboard.putData("HoldExposure", new HoldExposure());
         SmartDashboard.putData("AutoExposure", new AutoExposure());
         SmartDashboard.putData("SetExposureFromPrefs", new SetExposureFromPrefs());
