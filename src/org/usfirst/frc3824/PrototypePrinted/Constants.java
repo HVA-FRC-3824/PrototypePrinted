@@ -27,9 +27,10 @@ public class Constants
 
 	// ***************************************************************************************
 	// Image turn constants
-	public static double IMAGE_TURN_P                          = 0.1;
-	public static double IMAGE_TURN_I                          = 0.0;
-	public static double IMAGE_TURN_D                          = 0.0;
+	public static double IMAGE_TURN_P                          = 2.0;	// Preference name: ImageTurn_P
+	public static double IMAGE_TURN_I                          = 0.0;	// Preference name: ImageTurn_I
+	public static double IMAGE_TURN_D                          = 0.6;	// Preference name: ImageTurn_D
+																		// Preference name: ImageTurn_MaxAbsOutput
 	
 	// ***************************************************************************************
 	// Shooter Elevation constants
