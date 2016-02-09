@@ -18,6 +18,7 @@ import org.usfirst.frc3824.PrototypePrinted.subsystems.*;
 
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
@@ -87,6 +88,9 @@ public class Robot extends IterativeRobot
 
 		// RobotMap.chassisCompressor.start();
 		RobotMap.chassisCompressor.setClosedLoopControl(true);
+		
+		// Start the target camera image processing
+		targetCam.start();
 	}
 
 	/**
