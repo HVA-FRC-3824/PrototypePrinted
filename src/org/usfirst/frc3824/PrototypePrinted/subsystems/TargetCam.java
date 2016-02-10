@@ -79,8 +79,10 @@ public class TargetCam extends Subsystem
 		// setDefaultCommand(new MySpecialCommand());
 	}
 	
-	public void cameraEnable()
+	public void startStream()
 	{
+		boolean retry;
+		
 		if(m_singleFrame == null)
 		{
 			m_singleFrame = NIVision.imaqCreateImage(NIVision.ImageType.IMAGE_RGB, 0);
@@ -88,7 +90,21 @@ public class TargetCam extends Subsystem
 		
 		if(m_targetCam != null && !m_running)
 		{
-			m_targetCam.openCamera();
+			retry = false;
+			for(int i=0; i<3 && retry == true; i++)
+			{
+				try
+				{
+					m_targetCam.openCamera();
+					retry = false;
+				}
+				catch(Exception e)
+				{
+					killImageProcessing();
+		            Timer.delay(0.5);		// 0.5 second delay to give the process a chance to die
+					retry = true;
+				}
+			}
 			m_targetCam.startCapture();
 			m_running = true;
 		}
