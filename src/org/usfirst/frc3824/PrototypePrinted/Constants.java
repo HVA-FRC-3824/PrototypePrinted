@@ -24,14 +24,19 @@ public class Constants
 	public static double DRIVETRAIN_DRIVE_STRAIGHT_P           = 0.1;
 	public static double DRIVETRAIN_DRIVE_STRAIGHT_I           = 0.0;
 	public static double DRIVETRAIN_DRIVE_STRAIGHT_D           = 0.0;
-
+	
+	public static double DRIVETRAIN_TURN_ANGLE_P               = 0.1;
+	public static double DRIVETRAIN_TURN_ANGLE_I               = 0.0;
+	public static double DRIVETRAIN_TURN_ANGLE_D               = 0.0;
+	
+	public static double TURN_THRESHOLD                        = 1.0;
+			
 	// ***************************************************************************************
 	// Image turn constants
 	public static double IMAGE_TURN_P                          = 2.0;	// Preference name: ImageTurn_P
 	public static double IMAGE_TURN_I                          = 0.0;	// Preference name: ImageTurn_I
 	public static double IMAGE_TURN_D                          = 0.6;	// Preference name: ImageTurn_D
 																		// Preference name: ImageTurn_MaxAbsOutput
-	
 	// ***************************************************************************************
 	// Shooter Elevation constants
 	public static double SHOOTER_ELEVATION_SETPOINT_MIN        = .30;
